@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKEA Clone</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <h1>IKEA Clone</h1>
+    <nav>
+      <input type="text" id="search" placeholder="Search products..." onkeyup="filterProducts()">
+      <button id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+  <main>
+    <section id="product-list">
+      <!-- Products will be dynamically inserted here -->
+    </section>
+    <section id="cart-section" style="display: none;">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div id="cart-total">
+        <p>Total: ₹<span id="total-price">0</span></p>
+        <button id="checkout-btn">Checkout</button>
+      </div>
+    </section>
+  </main>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
